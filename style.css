@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: sans-serif;
+    margin: 0 30px;
+    background-color: rgb(224, 232, 236);
+}
+
+body>h1 {
+    text-align: center; 
+    font-size: 40px;
+    border-bottom: 3px solid black;
+    padding-bottom: 3px;
+}
+
+.bill-container {
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    border: 2px solid rgb(0, 0, 0);
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
+
+.bill-container>div {
+    width: 100%;
+}
+
+.left-bill {
+    color: rgb(91, 91, 225);
+    padding: 0 10px 0 10px;
+}
+
+.bill-input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    border: 2px solid rgb(53, 51, 51);
+    border-radius: 10px;
+    overflow: hidden;
+    padding-left: 10px;
+    font-size: 25px;
+    background-color: rgb(255, 255, 255);
+}
+
+.bill-input-container input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 5px;
+    font-size: inherit;
+}
+
+.headings {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.tips-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 3px;
+    margin-bottom: 10px; 
+}
+.tips-container.disabled { 
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.tip {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(153, 72, 230);
+    color: white;
+    border-radius: 2px;   
+}
+
+.selected {
+    background-color: rgb(43, 3, 77); 
+}
+
+.grey-input {
+    border: none;
+    outline: none;
+    background-color: #ddd;
+    border-radius: 2px;
+    font-size: inherit; 
+    padding: 5px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.custom-tip {
+    border: none;
+    outline: none;
+}
+
+.custome-tip-container {
+    display: flex;
+    align-items: center;
+    background-color: #ddd; 
+    padding-left: 8px;
+}
+
+.custome-tip-container>span {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.custome-tip-container input {
+    width: 100%;
+    padding: 5px 4px;
+    font-size: 1rem;
+    background-color: inherit;
+}
+
+.generatBill-btn:disabled {   
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 20px;
+    background-color: rgb(153, 72, 230);
+    border: none;
+    border-radius: 3px;
+    color: black;
+}
+.reset-btn{
+    background-color: #ddd;  
+}
+.reset-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.right-bill {
+    background-color: rgb(71, 71, 212);
+    color: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 20px;
+}
+
+.right-bill p {
+    display: flex; 
+    justify-content: space-between;
+    font-size: 22px;
+}
+
+input:disabled{
+    cursor: not-allowed;
+}
+
+@media(max-width: 670px) {
+    .bill-container {
+        flex-direction: column;
+        border: none;
+        margin-block: 5px;
+    }
+    .headings {  
+        margin-top: 5px;
+        
+    }
+
+}
